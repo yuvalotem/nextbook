@@ -8,6 +8,8 @@ const StyledTooltip = styled(Box)(({ theme }) => ({
     paddingRight: '0.5rem',
     paddingBottom: '0.25rem',
     paddingTop: '0.25rem',
-    borderRadius: '0.25rem'
+    borderRadius: '0.25rem',
+    color: theme.palette.common.white,
+
 }));
 export const HeaderTooltip: FC<TooltipProps> = (props) => (<Tooltip components={{ Tooltip: StyledTooltip }} {...props} />)

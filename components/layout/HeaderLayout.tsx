@@ -13,6 +13,7 @@ const HeaderContainer = styled(Grid)(({ theme }) => ({
     backgroundColor: theme.palette.common.white,
     flexDirection: 'row',
     alignItems: 'center',
+    boxShadow: '0 2px 2px -2px rgba(0,0,0,.2)',
 }));
 
 export const HeaderLayout: FC<React.PropsWithChildren> = ({ children }) => {

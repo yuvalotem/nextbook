@@ -4,6 +4,7 @@ import TabList from '@mui/lab/TabList';
 import { SetState } from '../types/react';
 import { tabsIconList } from "../icons";
 import { HeaderTooltip } from "../elements";
+import { useRouter } from 'next/router'
 
 const TabsContainer = styled(Box)({
     height: '100%',
@@ -30,8 +31,12 @@ const StyledTab = styled(Tab)<{ active: boolean }>(({ theme, active }) => ({
 }))
 
 export const Tabs = ({ selectedTab, setTab }: TabProps) => {
-    const handleChange = (event: React.SyntheticEvent, newValue: string) => {
-        setTab(newValue);
+    const router = useRouter()
+
+    const handleChange = (event: React.SyntheticEvent, selectedTabId: string) => {
+        setTab(selectedTabId);
+        const url = tabsIconList.find(tab => tab.id === selectedTabId)?.url
+        url && router.push(url)
     };
 
     return (<TabsContainer>
@@ -41,7 +46,8 @@ export const Tabs = ({ selectedTab, setTab }: TabProps) => {
                     <StyledTab
                         label={<Icon />}
                         value={id}
-                        active={selectedTab === id} />
+                        active={selectedTab === id}
+                    />
                 </HeaderTooltip>
             ))}
         </TabList>

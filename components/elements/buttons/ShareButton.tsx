@@ -1,8 +1,7 @@
-import { Button, ButtonProps } from "@mui/material";
+import { ButtonProps } from "@mui/material";
 import ReplyIcon from '@mui/icons-material/Reply';
+import { PostButton } from "./PostButton";
 
 export const ShareButton = (props: ButtonProps) => (
-    <Button startIcon={<ReplyIcon />} {...props}>
-        Share
-    </Button >
+    <PostButton text="Share" checked={false} Icon={ReplyIcon} {...props} />
 )

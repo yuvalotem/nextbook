@@ -2,13 +2,32 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
 import { postList } from '../../postList'
 
+type AccountType = {
+  name: string,
+  imageUrl?: string,
+}
+
+type LikesType = {
+  num?: number,
+  checked: boolean,
+}
+
+type ContentType = {
+  text: string,
+  imageUrl?: string,
+}
+
+type CommentType = {
+  text: string,
+}
 export type Post = {
   id: string,
-  account: string,
+  account: AccountType,
   date: Date,
-  content: string,
-  likes: number,
-  comments: number,
+  content: ContentType,
+  likes: LikesType,
+  comments: CommentType[],
+  shares?: number
 }
 
 export default function handler(

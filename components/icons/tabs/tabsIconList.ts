@@ -10,4 +10,4 @@ export const tabsIconList = [
     { Icon: StoreIcon, id: "2", tooltip: "Marketplace", url: '/marketplace' },
     { Icon: GroupsIcon, id: "3", tooltip: "Groups", url: '/groups' },
     { Icon: GameIcon, id: "4", tooltip: "Gaming", url: '/gaming' }
-]
+];

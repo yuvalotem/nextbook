@@ -1,1 +1,2 @@
-export * from './Posts'
+export * from './post'
+export * from './navgation'

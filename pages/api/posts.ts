@@ -1,6 +1,5 @@
-// Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from 'next'
-import { postList } from '../../postList'
+import { postListMock } from '../../mocks'
 
 type AccountType = {
   name: string,
@@ -34,5 +33,5 @@ export default function handler(
   req: NextApiRequest,
   res: NextApiResponse<Post[]>
 ) {
-  res.status(200).json(postList)
+  res.status(200).json(postListMock)
 }

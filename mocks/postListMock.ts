@@ -1,6 +1,6 @@
-import { Post } from "./pages/api/posts";
+import type { Post } from "../pages/api/posts";
 
-export const postList: Post[] = [
+export const postListMock: Post[] = [
     {
         account: { name: 'John Doe', imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTv5T9G-B_94Liv4WQ2W-ulYpOqYM_0Yq6su6KgzQEzHU1InT6k-xEMNQvydTUrtqcPQio&usqp=CAU" },
         content: { text: 'This is my first post, I decided to upload it because I really like the desgin of this app' },

@@ -7,9 +7,10 @@ import { Tabs } from './Tabs';
 import { LogoWithSearch } from './LogoWithSearch';
 import { MenuOptions } from './MenuOptions';
 
+export const APP_HEADER_HEIGHT = "3.5rem"
 const HeaderContainer = styled(Grid)(({ theme }) => ({
     width: '100%',
-    height: '3.5rem',
+    height: APP_HEADER_HEIGHT,
     backgroundColor: theme.palette.common.white,
     flexDirection: 'row',
     alignItems: 'center',
@@ -17,11 +18,11 @@ const HeaderContainer = styled(Grid)(({ theme }) => ({
     position: "sticky",
     top: "0px",
     left: "0px",
-    zIndex: "9999",
+    zIndex: "1000",
 }));
 
 export const HeaderLayout: FC<React.PropsWithChildren> = ({ children }) => {
-    const [tab, setTab] = useState('0')
+    const [tab, setTab] = useState("0")
 
     return (
         <TabContext value={tab}>

@@ -1,6 +1,6 @@
 import { Grid } from '@mui/material'
 import Head from 'next/head'
-import { Posts } from '../components'
+import { NavigationSideBar, Posts } from '../components'
 
 export default function Home() {
   return (
@@ -12,7 +12,7 @@ export default function Home() {
       </Head>
       <Grid container>
         <Grid item xs={4}>
-          <h3>groups info</h3>
+        <NavigationSideBar/>
         </Grid>
         <Grid item xs={6}>
           <Posts />

@@ -7,9 +7,10 @@ import { Tabs } from './Tabs';
 import { LogoWithSearch } from './LogoWithSearch';
 import { MenuOptions } from './MenuOptions';
 
-export const APP_HEADER_HEIGHT = "3.5rem"
+export const APP_HEADER_HEIGHT = "2.5rem"
 const HeaderContainer = styled(Grid)(({ theme }) => ({
     width: '100%',
+    flexWrap:"nowrap",
     height: APP_HEADER_HEIGHT,
     backgroundColor: theme.palette.common.white,
     flexDirection: 'row',

@@ -10,8 +10,9 @@ import { ExpandCollapaseNavigationItem } from "./ExpandCollapaseNavigationItem";
 import { NavigationItem } from "./NavigationItem";
 import Image from 'next/image';
 
-export const ShortcutsList = ({ shortcuts }: { shortcuts?: ShortcutsType[] }) => {
+export const ShortcutsList = () => {
     const [expanded, setExpanded] = useState(false)
+    const { data: shortcuts, error } = useFetchData<ShortcutsType[]>('/api/shortcuts')
 
     return (<>
         <FlexSpaceBetween pl={2}>

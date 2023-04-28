@@ -1,4 +1,4 @@
-import { ListItemIcon, ListItemText, MenuItem, Typography } from "@mui/material"
+import { ListItemIcon, ListItemText, MenuItem, MenuItemProps, Typography } from "@mui/material"
 import { useRouter } from "next/router"
 import { useCallback } from "react"
 
@@ -7,8 +7,9 @@ export type NavigationItemProps = {
     icon: JSX.Element,
     url?: string,
     onClick?: () => void
+    sx?: MenuItemProps['sx']
 }
-export const NavigationItem = ({ label, icon, url, onClick }: NavigationItemProps) => {
+export const NavigationItem = ({ label, icon, url, onClick, sx }: NavigationItemProps) => {
     const router = useRouter()
 
     const handleClick = useCallback(() => {
@@ -17,7 +18,7 @@ export const NavigationItem = ({ label, icon, url, onClick }: NavigationItemProp
     }, [onClick, url, router])
 
     return (
-        <MenuItem sx={{ height: "2.125rem" }} onClick={handleClick}>
+        <MenuItem sx={{ height: "2.125rem", borderRadius: "8px", ...sx }} onClick={handleClick}>
             <ListItemIcon>
                 {icon}
             </ListItemIcon>

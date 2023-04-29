@@ -1,6 +1,9 @@
 ## Nextboox
 Facebook mock created with next.js 13
 
+desktop design:
+![nextbook-demo](./public/nextbook-demo.png)
+
 
 ## Getting Started on your local computer
 

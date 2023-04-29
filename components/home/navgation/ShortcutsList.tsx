@@ -1,7 +1,7 @@
 
 
 
-import { Button, Typography } from "@mui/material";
+import { Button } from "@mui/material";
 import { useState } from "react";
 import { useFetchData } from "../../../api";
 import { ShortcutsType } from "../../../pages/api/shortcuts";
@@ -9,6 +9,7 @@ import { FlexSpaceBetween } from "../../layout";
 import { ExpandCollapaseNavigationItem } from "./ExpandCollapaseNavigationItem";
 import { NavigationItem } from "./NavigationItem";
 import Image from 'next/image';
+import { TypographySubtitle1 } from "../../elements";
 
 export const ShortcutsList = () => {
     const [expanded, setExpanded] = useState(false)
@@ -16,7 +17,7 @@ export const ShortcutsList = () => {
 
     return (<>
         <FlexSpaceBetween pl={2}>
-            <Typography variant="subtitle2">Your shortcuts</Typography>
+            <TypographySubtitle1>Your shortcuts</TypographySubtitle1>
             <Button variant="text"
                 sx={{
                     width: "0.5rem",

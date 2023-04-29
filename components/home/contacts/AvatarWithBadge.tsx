@@ -1,4 +1,5 @@
-import { Avatar, Badge, styled } from "@mui/material"
+import { Badge, styled } from "@mui/material"
+import { MainAvatar } from "../../elements";
 
 const StyledBadge = styled(Badge)(({ theme }) => ({
     '& .MuiBadge-badge': {
@@ -19,8 +20,7 @@ type AvatarWithBadgeProps = {
 export const AvatarWithBadge = ({ withBadge, src, alt }: AvatarWithBadgeProps) => {
 
     if (!withBadge) {
-        return <Avatar
-            sx={{ width: "1.75rem", height: "1.75rem" }}
+        return <MainAvatar
             src={src}
             alt={alt}
         />
@@ -31,8 +31,7 @@ export const AvatarWithBadge = ({ withBadge, src, alt }: AvatarWithBadgeProps) =
         anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
         variant="dot"
     >
-        <Avatar
-            sx={{ width: "1.75rem", height: "1.75rem" }}
+        <MainAvatar
             src={src}
             alt={alt}
         />

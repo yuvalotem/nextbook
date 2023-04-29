@@ -4,6 +4,7 @@ import { PostContainer } from "./PostContainer"
 import { PostContent } from "./PostContent"
 import { PostFooter } from "./PostFooter"
 import { PostHeader } from "./PostHeader"
+import { Divider } from '@mui/material'
 
 export const Post = ({ account, date, content, likes, comments, shares }: PostType) => {
     return (
@@ -14,6 +15,7 @@ export const Post = ({ account, date, content, likes, comments, shares }: PostTy
                 numberOfLikes={likes.num}
                 numberOfComments={comments.length}
                 numberOfShares={shares} />
+            <Divider />
             <PostFooter liked={likes.checked} />
         </PostContainer>
     )

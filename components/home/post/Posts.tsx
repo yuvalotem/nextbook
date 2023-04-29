@@ -3,6 +3,7 @@ import { useFetchData } from '../../../api'
 import { Post as PostType } from '../../../pages/api/posts'
 import { AllPostsContainer } from './AllPostsContainer'
 import { Post } from './Post'
+import { WritePostSection } from './WritePostSection'
 
 export const Posts = () => {
     const { data: posts, error } = useFetchData<PostType[]>('/api/posts')
@@ -12,6 +13,7 @@ export const Posts = () => {
 
     return (
         <AllPostsContainer>
+            <WritePostSection/>
             {posts?.map(post => <Post key={post.id} {...post} />)}
         </AllPostsContainer>
     )
